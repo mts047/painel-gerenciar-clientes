@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags, title, e link para o CSS -->
+</head>
+<body>
+    <header>
+        <!-- Conteúdo do cabeçalho -->
+    </header>
+    <div class="container">
+        <h2>Lista de Clientes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Whatsapp</th>
+                    <th>Email</th>
+                    <th>Data de Ativação</th>
+                    <th>Data do Último Pagamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                $clientes = file("data/clientes.txt", FILE_IGNORE_NEW_LINES);
+                foreach ($clientes as $cliente) {
+                    $dados = explode(", ", $cliente);
+                    echo "<tr>";
+                    foreach ($dados as $dado) {
+                        echo "<td>$dado</td>";
+                    }
+                    echo "</tr>";
+                }
+                ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

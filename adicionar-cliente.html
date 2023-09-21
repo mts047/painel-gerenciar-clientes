@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Cliente</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Adicionar Cliente</h1>
+    </header>
+    <div class="container">
+        <!-- Adicione o atributo "action" ao elemento <form> -->
+        <form action="processar-formulario.php" method="post">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="whatsapp">Whatsapp:</label>
+            <input type="text" id="whatsapp" name="whatsapp">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <label for="data-ativacao">Data de Ativação:</label>
+            <input type="date" id="data-ativacao" name="data-ativacao" required>
+            <label for="data-pagamento">Data do Último Pagamento:</label>
+            <input type="date" id="data-pagamento" name="data-pagamento">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+</body>
+</html>
