@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $linha = "$nome, $whatsapp, $email, $dataAtivacao, $dataPagamento" . PHP_EOL;
 
     // Abrir o arquivo "clientes.txt" para escrita
-    $arquivo = fopen("data/clientes.txt", "a"); // "a" para adicionar ao arquivo existente
+    $arquivo = fopen("https://mts047.github.io/painel-gerenciar-clientes/blob/main/data/clientes.txt", "a"); // "a" para adicionar ao arquivo existente
 
     if ($arquivo) {
         // Escrever a linha no arquivo
